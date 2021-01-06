@@ -1,0 +1,76 @@
+// You tube video https://www.youtube.com/watch?v=6xWVWDvmqeU&t=28s
+
+void main() {
+  //Task 1: Double all numbers in the list and print them
+  print("Task 1 ");
+  print("");
+  List<int> numbers = [4, 59, 135, 7264];
+  var powNumbers = numbers.map((indexassign) => indexassign * 2);
+  print(powNumbers);
+  print("");
+  print("");
+
+  ////Task 2: Pring the length of each name
+  print("Task 2 ");
+  print("");
+  List<String> names = ['Max', 'Ed', 'Sara', 'Peter'];
+  var lengthNames = names.map((element) => element.length);
+  print(lengthNames);
+
+  ////Task 3:  Create a best friend out of each friend
+  print("Task 3 ");
+  print("");
+
+  List<Friend> myFriends = [
+    Friend(name: 'Daniel', age: 18),
+    Friend(name: 'Jessica', age: 25),
+    Friend(name: 'Mathias', age: 32),
+    Friend(name: 'Alex', age: 22),
+  ];
+
+  //show me each instance of myFriends created as List with type Friend
+  Iterable printFriends = myFriends.map((f) => f);
+  print(printFriends);
+  
+  Iterable printname = myFriends.map((f) => f.name);
+  print(printname );
+  
+  Iterable printage = myFriends.map((f) => f.age);
+  print(printage);
+  
+  // TO DO
+  Iterable<BestFriend> bestFriends = myFriends.map(
+  (friend) => BestFriend(name: friend.name),
+  );
+  
+  print(bestFriends);
+  
+  bestFriends.forEach(
+    (bestFriend) => print(
+     bestFriend.say(),
+    ),
+  );
+}
+
+class Friend {
+  String name;
+  int age;
+
+  Friend({this.name, this.age});
+}
+
+class BestFriend {
+  String name;
+
+  BestFriend({this.name});
+
+  String say() {
+    return 'One of my best friend is $name';
+  }
+}
+
+/*
+ map function iterates
+
+
+ */
