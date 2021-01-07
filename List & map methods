@@ -1,5 +1,3 @@
-// You tube video https://www.youtube.com/watch?v=6xWVWDvmqeU&t=28s
-
 void main() {
   //Task 1: Double all numbers in the list and print them
   print("Task 1 ");
@@ -31,23 +29,23 @@ void main() {
   //show me each instance of myFriends created as List with type Friend
   Iterable printFriends = myFriends.map((f) => f);
   print(printFriends);
-  
+
   Iterable printname = myFriends.map((f) => f.name);
-  print(printname );
-  
+  print(printname);
+
   Iterable printage = myFriends.map((f) => f.age);
   print(printage);
-  
+
   // TO DO
   Iterable<BestFriend> bestFriends = myFriends.map(
-  (friend) => BestFriend(name: friend.name),
+    (friend) => BestFriend(name: friend.name),
   );
-  
+
   print(bestFriends);
-  
+
   bestFriends.forEach(
     (bestFriend) => print(
-     bestFriend.say(),
+      bestFriend.say(),
     ),
   );
 }
@@ -68,9 +66,3 @@ class BestFriend {
     return 'One of my best friend is $name';
   }
 }
-
-/*
- map function iterates
-
-
- */
